@@ -24,7 +24,7 @@ jobs:
 
       - name: Tag Docker image
         run: |
-          docker tag registry.cn-hangzhou.aliyuncs.com/tu1h/wechotd:alpine ${{ secrets.DOCKERHUB_USERNAME }}/wechotd:alpine
+          docker tag registry.cn-chengdu.aliyuncs.com/tu1h/wechotd:alpine ${{ secrets.DOCKERHUB_USERNAME }}/wechotd:alpine
 
       - name: Push Docker image
         run: |
