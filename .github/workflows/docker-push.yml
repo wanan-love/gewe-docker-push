@@ -20,12 +20,12 @@ jobs:
 
       - name: Pull Docker image
         run: |
-          docker pull registry.cn-hangzhou.aliyuncs.com/gewe/gewe:latest
+          docker pull registry.cn-chengdu.aliyuncs.com/tu1h/wechotd:alpine
 
       - name: Tag Docker image
         run: |
-          docker tag registry.cn-hangzhou.aliyuncs.com/gewe/gewe ${{ secrets.DOCKERHUB_USERNAME }}/gewe:latest
+          docker tag registry.cn-hangzhou.aliyuncs.com/tu1h/wechotd:alpine ${{ secrets.DOCKERHUB_USERNAME }}/wechotd:alpine
 
       - name: Push Docker image
         run: |
-          docker push ${{ secrets.DOCKERHUB_USERNAME }}/gewe:latest
+          docker push ${{ secrets.DOCKERHUB_USERNAME }}/wechotd:alpine
