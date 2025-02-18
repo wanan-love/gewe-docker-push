@@ -20,12 +20,12 @@ jobs:
 
       - name: Pull Docker image
         run: |
-          docker pull registry.cn-chengdu.aliyuncs.com/tu1h/wechotd:alpine
+          docker pull registry.cn-hangzhou.aliyuncs.com/hanfangyuan/dify-on-wechat:latest
 
       - name: Tag Docker image
         run: |
-          docker tag registry.cn-chengdu.aliyuncs.com/tu1h/wechotd:alpine ${{ secrets.DOCKERHUB_USERNAME }}/wechotd:alpine
+          docker tag registry.cn-hangzhou.aliyuncs.com/hanfangyuan/dify-on-wechat:latest ${{ secrets.DOCKERHUB_USERNAME }}/dify-on-wechat:latest
 
       - name: Push Docker image
         run: |
-          docker push ${{ secrets.DOCKERHUB_USERNAME }}/wechotd:alpine
+          docker push ${{ secrets.DOCKERHUB_USERNAME }}/dify-on-wechat:latest
